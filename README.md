@@ -1,54 +1,99 @@
-# [Clone Bot- UI](https://github.com/m4mallu/clonebot-ui) 
-𝖨𝗇𝗍𝖾𝗋𝖿𝖺𝖼𝖾 𝖻𝖺𝗌𝖾𝖽 𝖽𝖾𝗌𝗂𝗀𝗇
-<br>
-<br>
-
-𝖠 𝖳𝖾𝗅𝖾𝗀𝗋𝖺𝗆 𝖡𝗈𝗍 𝖼𝖺𝗇 𝖼𝗅𝗈𝗇𝖾 𝗆𝖾𝖽𝗂𝖺 𝖿𝗋𝗈𝗆 𝖺𝗇𝗒 𝖼𝗁𝖺𝗍
-
-<br>
-
-<p align="center">
-    <a href="https://www.python.org">
-        <img src="https://img.shields.io/badge/PYTHON-PROJECT-blueviolet?style=for-the-badge&logo=python">
+<h1 align="left">
+    <a target="_blank">
+        Clonebot
+        <img src="http://www.randomnoun.com/wpf/shell32-avi/tshell32_160.gif" width="272" height="60">
     </a>
+</h1>
 
-<p align="center">
-  <a href="https://github.com/m4mallu/clonebot-ui/stargazers">
-    <img src="https://img.shields.io/github/stars/m4mallu/clonebot-ui?style=social">
-  </a>
-  <a href="https://github.com/m4mallu/clonebot-ui/fork">
-    <img src="https://img.shields.io/github/forks/m4mallu/clonebot-ui?label=Fork&style=social">
-  </a>  
+#### An <a href="https://choosealicense.com/licenses/gpl-3.0/"  target="_blank"> opensource </a> Telegram robot can clone media & text from any chat to your own chat.<br>
+Read the <a href="https://space4renjith.blogspot.com/2022/05/clonebot-technical-documentation.html" target="_blank"> documentation </a>to know how to use the bot
+<br>
+<p align="left">
+    <br>
+        <b>DUE TO SOME SECURITY REASONS, DEPLOY TO HEROKU FROM THIS REPOSITORY HAS BEEN ABOLISHED !</b>
+    <br>
+        <s>To deploy this bot in heroku, you may need to follow the steps mentioned below</s>
+    <br><br>
+        1. Fork this Repository first.
+    <br>
+        2. Change the <a href="https://github.com/m4mallu/clonebot/blob/master/app.json#L7" target="_blank"> app.json </a> 'repository' URL to your fork URL.
+    <br>
+        3. Change the <a href="https://github.com/m4mallu/clonebot/blob/master/README.md?plain=1#L25" target="_blank"> deploy button </a> URL to your fork URL.
+    <br>
+        4. Finally, deploy it from your own fork (<a href="https://telegra.ph/Attention-to-clone-bot-users-08-01" target="_blank">Risk factor</a>).
+    <br><br>
+      <a href="https://heroku.com/deploy?template=https://github.com/your_fork_url" target="_blank">
+        <img height="30px" src="https://img.shields.io/badge/Deploy%20to-Heroku-orange"></a>
+    <br><br>
+    <a href="https://t.me/rmprojects" target="_blank">@M4Mallu</a>
 </p>
 
-<br>
+<details>
+    <summary><b>Deploy Using Docker</b></summary>
+1. Deploying on VPS Using Docker
 
-[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/m4mallu/clonebot-ui)
+- Start Docker daemon (skip if already running), if installed by snap then use 2nd command:
+    
+        sudo dockerd
+        sudo snap start docker
 
-<br>
+     Note: If not started or not starting, run the command below then try to start.
 
-<p align="center">
-    <a href="https://telegra.ph/Clonebot-UI-Help-05-30">
-        <img src="https://img.shields.io/badge/Read-Documentation-blueviolet?style=for-the-badge&logo=telegraph">
-    </a>
-    <a href="https://github.com/m4mallu/clonebot">
-        <img src="https://img.shields.io/badge/Clonebot-Main%20Page-blueviolet?style=for-the-badge&logo=github">
-    </a>
-</p>
+        sudo apt install docker.io
 
-<p align="center">
-    <a href="https://t.me/space4renjith">
-        <img src="https://img.shields.io/badge/Contact-Developer-blueviolet?style=for-the-badge&logo=telegram">
-    </a>
-    <a href="https://github.com/pyrogram/pyrogram">
-        <img src="https://img.shields.io/badge/development-credits-blueviolet?style=for-the-badge&logo=github">
-    </a>
-</p>
+- Build Docker image:
 
-<p align="center">
-    <a href="https://t.me/space4renjith">
-        <img alt="GPL3" src ="https://telegra.ph/file/c4f778ccfc576a954dd20.gif" width="340" height="214"/>
-    </a>
-</p>
+        sudo docker build . -t clone-bot
+
+- Run the image:
+
+        sudo docker run clone-bot
+
+- To stop the image:
+
+        sudo docker ps
+        sudo docker stop id
+
+- To clear the container:
+
+        sudo docker container prune
+
+- To delete the images:
+
+        sudo docker image prune -a
+
+2. Deploying on VPS Using docker-compose
+
+    **NOTE**: If you want to use port other than 80, change it in docker-compose.yml
+
+```
+sudo apt install docker-compose
+```
+- Build and run Docker image:
+```
+sudo docker-compose up
+```
+- After editing files with nano for example (nano start.sh):
+```
+sudo docker-compose up --build
+```
+- To stop the image:
+```
+sudo docker-compose stop
+```
+- To run the image:
+```
+sudo docker-compose start
+```
+
+</details>
+
+
+
+
+
+
+
+
 
 

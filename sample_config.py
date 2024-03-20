@@ -1,20 +1,11 @@
 #----------------------------------- https://github.com/m4mallu/clonebot --------------------------------------------#
 import os
 import logging
-from logging.handlers import RotatingFileHandler
 
 logging.basicConfig(
     level=logging.INFO,
     format="[%(asctime)s - %(levelname)s] - %(name)s - %(message)s",
     datefmt='%d-%b-%y %H:%M:%S',
-    handlers=[
-        RotatingFileHandler(
-            "clonebot-ui.txt",
-            maxBytes=50000000,
-            backupCount=10
-        ),
-        logging.StreamHandler()
-    ]
 )
 logging.getLogger("pyrogram").setLevel(logging.WARNING)
 
@@ -28,9 +19,6 @@ class Config(object):
 
     # Get from my.telegram.org
     API_HASH = os.environ.get("API_HASH", "")
-
-    # Authorized users to use this bot
-    AUTH_USERS = set(int(x) for x in os.environ.get("AUTH_USERS", "").split())
 
     # Generate a user session string
     TG_USER_SESSION = os.environ.get("TG_USER_SESSION", "")
